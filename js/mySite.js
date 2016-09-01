@@ -3,12 +3,31 @@
  */
 $(document).ready( function  (){
     var $school_experience= $('.school_experience ');
+    var $cover=$('.cover');
     function addActive(obj){
         $(obj).parent().addClass('active').siblings().removeClass('active').children('.main_content').show();
+    };
+    function showPlace($obj){
+        var height=$(window).height();
+        var width=$(window).width();
+        $obj.css("width",width);
+        $obj.css("height",height);
+
     }
+    $('.home').click(function (){
+        $('._close').trigger('click');
+    });
+    $('.study').click(function (){
+        $('._close').trigger('click');
+    })
        /*学校经历点击事件*/
     $('.school').click(function (){
         $('#experience').slideDown('15000');
+               $cover.show();
+        showPlace($cover);
+        $('#fullPage').hide().setAllowScrolling();
+
+
     });
     $school_experience.find('.check').click(function (){
             addActive(this);
@@ -18,22 +37,50 @@ $(document).ready( function  (){
     });
     $('._close').click(function (){
         $('#experience').hide();
+        $cover.hide();
+        $('#fullPage').show();
+
     });
+    $('.small_pic_box img').click(function () {
+                var src=this.getAttribute('src');
+        var target=document.getElementById('target');
+          target.setAttribute('src',src);
+        $('.small_pic_box >li>img').removeClass('border_orange');
+        $(this).addClass('border_orange');
+
+
+    });
+    $('.java').mouseover(function (){
+        $('.det').hide();
+        $(this).siblings('.det').show();
+        $('.triangle').addClass('rotate');
+        $(this).siblings('.triangle').removeClass('rotate');
+
+
+    }).mouseout(function (){
+        $(this).siblings('.det').hide();
+        $('.triangle').removeClass('rotate');
+    })
 
     /*fullPage滑动*/
 
         $('#fullPage').fullpage(
             {
-                anchors:['page1','page2','page3','page4'],
+                anchors:['page1','page2','page3','page4','page5'],
                 verticalCenter:false,
                 resize:false,
                 scrollingSpeed:700,
                 css3:true,
                 navigation:true,
-                navigationPosition:"left",
-                navigationTooltips:['首页','关于我','专业技能','我的经历','我的作品','联系我'],
+                navigationPosition:"right",
+                slidesNavigation:true,
+                slidesNavPosition:'bottom',
+                controlArrowColor:'orange',
+                navigationTooltips:['首页','关于我','专业技能','学习与积累','联系我'],
                 afterRender:function(){
                     $('.evaluate p').css("top","2000px");
+                    $('.ar-left').show();
+                    $('.ar-right').show();
                 },
                 afterLoad:function (link,index){
                     switch (index){
@@ -51,11 +98,8 @@ $(document).ready( function  (){
                             break;
                         case 2:
                             $('.two h1').animate({top:"70px"},800, function () {
-                                  $('.about').animate({width:"200px",left:"0",right:"0",top:"100px"},1200,function(){
-                                      $(".two h1").after("<div class='title_1'><h2>· About me ·</h2></div>");
-                                      $(".title_1").animate({width:"130px"},800,function(){
-                                          $(".title_1 h2").slideDown(900, function () {
-                                              $('.info_pic').addClass('img_change');
+                                  $('.about').animate({width:"200px",top:"100px"},1200,function(){
+                                        $('.info_pic').addClass('img_change');
                                               $('.evaluate p').eq(0).animate({top:"0"},800,function(){
                                                   $('.evaluate p').eq(1).animate({top:"0"},800,function(){
                                                       $('.evaluate p').eq(2).animate({top:"0"},800,function(){
@@ -64,34 +108,41 @@ $(document).ready( function  (){
                                                   })
                                               })
 
-                                          });
-                                      });
                                   });
                             })
                             break;
                         case 3:
                             $('.three h1').animate({top:"130px"},800, function (){
-                                $('.about').animate({width:"200px",left:"0",right:"0",top:"160px"},1200,function(){
-                                    $(".three h1").after("<div class='title_1'><h2>· Skill ·</h2></div>");
-                                    $(".title_1").animate({width:"130px"},800,function(){
-                                        $(".title_1 h2").slideDown(900, function () {
-                                            $('.java').mouseover(function (){
-                                             $('.det').hide();
-                                             $(this).siblings('.det').show();
-                                             $('.triangle').addClass('rotate');
-                                             $(this).siblings('.triangle').removeClass('rotate');
+                                $('.about').animate({width:"200px",top:"160px"},1200,function(){
+                                    $('.info_pic').addClass('img_change');
+                                    $('.evaluate p').eq(0).animate({top:"0"},800,function(){
+                                        $('.evaluate p').eq(1).animate({top:"0"},800,function(){
+                                            $('.evaluate p').eq(2).animate({top:"0"},800,function(){
 
-
-                                             }).mouseout(function (){
-                                                $(this).siblings('.det').hide();
-                                                $('.triangle').removeClass('rotate');
                                             })
-
                                         })
                                     })
                                 })
                             })
                             break;
+                        case 4:
+                            $('.small_pic_box li').eq(0).show(800,function(){
+                                $('.small_pic_box li').eq(1).show(800,function(){
+                                    $('.small_pic_box li').eq(2).show(800,function(){
+                                        $('.small_pic_box li').eq(3).show(800, function () {
+                                            $('.big_pic').show();
+                                        })
+                                    })
+                                })
+                            })
+                            break;
+                        case 5:
+                            $('.six h1').animate({top:"130px"},800, function (){
+                                $('.about').animate({width:"200px",top:"160px"},1200,function(){
+                                        $(".title_1 ").slideDown();
+
+                                })
+                            })
                     }
                 },
                 onLeave:function(){
@@ -105,8 +156,13 @@ $(document).ready( function  (){
                     $('.about').css("width","0");
                     $('.info_pic').removeClass('img_change');
                     $(".title_1").hide();
-                    $('.evaluate p').css("top","800px");
+                    $('.evaluate .p3').css("top","800px");
+                    $('.evaluate .p4').css("top","800px");
+                    $('.evaluate .p5').css("top","800px");
                     $('.three h1').css("top","0");
+                    $('.small_pic_box li').hide();
+                    $('.big_pic').hide();
+                    $('.six h1').css('top','0')
 
 
 
