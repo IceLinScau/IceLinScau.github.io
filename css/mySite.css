@@ -256,7 +256,7 @@ a{
     font-size: 14px;
 }
 .main_content .div3{
-    height: 100px;
+    height: 60px;
 }
 .main_content .div3 p{
     line-height: 25px;
@@ -731,7 +731,7 @@ font-size: 25px;
 .ar-left{
     float: left;
     margin:0 0 0 150px;
-    text-align: center;
+
     width: 80px;
     font-size: 16px;
     font-weight: 500;
@@ -748,8 +748,7 @@ font-size: 25px;
 .ar-right{
     float:left;
     margin: 100px 200px 60px 150px;
-    text-align: center;
-    font-size: 16px;
+      font-size: 16px;
     font-weight: 500;
     color: blue;
     width: 80px;
@@ -849,23 +848,4 @@ font-size: 25px;
 .blue{
     color: #33CCFF;
     font-size: 40px;
-}
-.contact-info{
-    position: absolute;
-    top:380px;
-    width: 150px;
-    left: 50%;
-    margin-left: -75px;
-    height: 28px;
-    line-height: 28px;
-}
-.contact-info li{
-    float: left;
-    font-size:15px;
-
-}
-.contact-info li a{
-    color: #33CCFF;
-    margin: 0 5px;
-   font-size: 18px;
 }
