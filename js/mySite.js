@@ -2,6 +2,7 @@
  * Created by asus on 2016/8/16.
  */
 $(document).ready( function  (){
+
     var $school_experience= $('.school_experience ');
     var $cover=$('.cover');
     function addActive(obj){
@@ -81,6 +82,9 @@ $(document).ready( function  (){
                     $('.evaluate p').css("top","2000px");
                     $('.ar-left').show();
                     $('.ar-right').show();
+                    $('.intro_3').css({' bottom':'-30px',' left':'42%'});
+
+
                 },
                 afterLoad:function (link,index){
                     switch (index){
@@ -98,7 +102,7 @@ $(document).ready( function  (){
                             break;
                         case 2:
                             $('.two h1').animate({top:"70px"},800, function () {
-                                  $('.about').animate({width:"200px",top:"100px"},1200,function(){
+                                  $('.about').animate({width:"200px",top:"120px"},1200,function(){
                                         $('.info_pic').addClass('img_change');
                                               $('.evaluate p').eq(0).animate({top:"0"},800,function(){
                                                   $('.evaluate p').eq(1).animate({top:"0"},800,function(){
@@ -113,7 +117,7 @@ $(document).ready( function  (){
                             break;
                         case 3:
                             $('.three h1').animate({top:"130px"},800, function (){
-                                $('.about').animate({width:"200px",top:"160px"},1200,function(){
+                                $('.about').animate({width:"200px",top:"180px"},1200,function(){
                                     $('.info_pic').addClass('img_change');
                                     $('.evaluate p').eq(0).animate({top:"0"},800,function(){
                                         $('.evaluate p').eq(1).animate({top:"0"},800,function(){
@@ -137,8 +141,8 @@ $(document).ready( function  (){
                             })
                             break;
                         case 5:
-                            $('.six h1').animate({top:"130px"},800, function (){
-                                $('.about').animate({width:"200px",top:"160px"},1200,function(){
+                            $('.six h1').animate({top:"190px"},800, function (){
+                                $('.about').animate({width:"200px",top:"240px"},1200,function(){
                                         $(".title_1 ").slideDown();
 
                                 })
@@ -147,8 +151,6 @@ $(document).ready( function  (){
                 },
                 onLeave:function(){
                     $('.intro_1').css("left","-400px");
-                    $('.intro_3').css("bottom","-300px");
-                    $('.intro_4').css("bottom","-200px");
                     $('.bt').css("width","0");
                     $('.img_box').css("top","-400px");
                     $('intro_2').css("left","2000px");
