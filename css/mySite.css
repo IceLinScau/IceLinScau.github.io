@@ -620,28 +620,8 @@ font-size: 25px;
 .evaluate .p3{
     position: relative;
 }
-.p3:before{
-    width: 50px;
-    height: 50px;
-    border-top:4px solid #000;
-    border-left: 4px solid #000;
-    position: absolute;
-    top:-20px;
-    left:0;
-    content: "";
 
-}
-.p5:after{
-    width: 50px;
-    height: 50px;
-    border-bottom:4px solid #000;
-    border-right: 4px solid #000;
-    position: absolute;
-    bottom:-20px;
-    right:0;
-    content: "";
 
-}
 .three h1{
     width: 400px;
     position: absolute;
