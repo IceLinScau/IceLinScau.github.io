@@ -133,7 +133,7 @@ $(document).ready( function  (){
                                 })
                             })
                             break;
-                        case 5:
+                        case 6:
                             $('.six h1').animate({top:"190px"},800, function (){
                                 $('.about').animate({width:"200px",top:"240px"},1200,function(){
                                         $(".title_1 ").slideDown();
