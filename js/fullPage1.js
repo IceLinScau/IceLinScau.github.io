@@ -382,7 +382,7 @@
 
         /**
          * Moves the page to the given section and slide with no animation.
-         * Anchors or index positions can be used as params.
+         * Anchors or cloth_store positions can be used as params.
          */
         FP.silentMoveTo = function(sectionAnchor, slideAnchor){
             FP.setScrollingSpeed (0, 'internal');
@@ -392,7 +392,7 @@
 
         /**
          * Moves the page to the given section and slide.
-         * Anchors or index positions can be used as params.
+         * Anchors or cloth_store positions can be used as params.
          */
         FP.moveTo = function (sectionAnchor, slideAnchor){
             var destiny = getSectionByAnchor(sectionAnchor);
@@ -1212,7 +1212,7 @@
         /**
          * Detecting mousewheel scrolling
          *
-         * http://blogs.sitepointstatic.com/examples/tech/mouse-wheel/index.html
+         * http://blogs.sitepointstatic.com/examples/tech/mouse-wheel/cloth_store.html
          * http://www.sitepoint.com/html5-javascript-mouse-wheel/
          */
         var prevTime = new Date().getTime();
@@ -2249,7 +2249,7 @@
         }
 
         /**
-         * Gets a section by its anchor / index
+         * Gets a section by its anchor / cloth_store
          */
         function getSectionByAnchor(sectionAnchor){
             //section
@@ -2262,7 +2262,7 @@
         }
 
         /**
-         * Gets a slide inside a given section by its anchor / index
+         * Gets a slide inside a given section by its anchor / cloth_store
          */
         function getSlideByAnchor(slideAnchor, section){
             var slides = section.find(SLIDES_WRAPPER_SEL);
@@ -2348,7 +2348,7 @@
                         sectionHash = anchorLink;
                     }
 
-                    //slide without anchor link? We take the index instead.
+                    //slide without anchor link? We take the cloth_store instead.
                     if(typeof slideAnchor === 'undefined'){
                         slideAnchor = slideIndex;
                     }
@@ -2389,13 +2389,13 @@
         }
 
         /**
-         * Gets the anchor for the given slide / section. Its index will be used if there's none.
+         * Gets the anchor for the given slide / section. Its cloth_store will be used if there's none.
          */
         function getAnchor(element){
             var anchor = element.data('anchor');
             var index = element.index();
 
-            //Slide without anchor link? We take the index instead.
+            //Slide without anchor link? We take the cloth_store instead.
             if(typeof anchor === 'undefined'){
                 anchor = index;
             }

@@ -15,21 +15,14 @@ $(document).ready( function  (){
         $obj.css("height",height);
 
     }
-    $('.home').click(function (){
+   /* $('.home').click(function (){
         $('._close').trigger('click');
     });
     $('.study').click(function (){
         $('._close').trigger('click');
-    })
+    })*/
        /*学校经历点击事件*/
-    $('.school').click(function (){
-        $('#experience').slideDown('15000');
-               $cover.show();
-        showPlace($cover);
-        $('#fullPage').hide().setAllowScrolling();
 
-
-    });
     $school_experience.find('.check').click(function (){
             addActive(this);
     });
@@ -67,7 +60,7 @@ $(document).ready( function  (){
 
         $('#fullPage').fullpage(
             {
-                anchors:['page1','page2','page3','page4','page5'],
+                anchors:['page1','page2','page3','page4','page5','page6'],
                 verticalCenter:false,
                 resize:false,
                 scrollingSpeed:700,
@@ -77,7 +70,7 @@ $(document).ready( function  (){
                 slidesNavigation:true,
                 slidesNavPosition:'bottom',
                 controlArrowColor:'orange',
-                navigationTooltips:['首页','关于我','专业技能','学习与积累','联系我'],
+                navigationTooltips:['首页','关于我','专业技能','学习与积累','学校经历','联系我'],
                 afterRender:function(){
                     $('.evaluate p').css("top","2000px");
                     $('.ar-left').show();
