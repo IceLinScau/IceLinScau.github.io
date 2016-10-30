@@ -167,13 +167,14 @@ a{
 }
 .school_experience .pic p{
     text-align: center;
-    color: #41838E;
+    color: #fff;
     font-family: Arial black;
+
 }
 .school_experience .pic img{
     width: 72px;
     height: 72px;
-    border: 5px solid #41838E;
+    border: 5px solid #84A1DB;
 }
 .check .spite{
     z-index: 1;
@@ -193,13 +194,13 @@ a{
     top: 40px;
     width: 16px;
     height: 16px;
-    border: 3px solid #41838E;
+    border: 3px solid #84A1DB;
     cursor: pointer;
     background: url(../image/sprite.png) no-repeat 1px -100px;
 }
 .check .line {
     position: absolute;
-    width: 38px;
+    width: 43px;
     height: 1px;
     background: #fff;
     left: 180px;
@@ -207,10 +208,10 @@ a{
     font-size: 1px;
 }
 .content{
-    left: 234px;
+    left: 232px;
     top: 10px;
     width: 730px;
-    border-left: 5px solid #41838E;
+    border-left: 5px solid #84A1DB;
     background: #fff;
 
 
@@ -221,7 +222,7 @@ a{
     line-height: 15px;
     padding-top: 5px;
     margin-bottom: 5px;
-    color: #41838E;
+    color: #84A1DB;
 }
 .main_content{
     height:80px;width:730px ;
@@ -277,7 +278,7 @@ a{
 
 }
 .expect{
-    height: 190px;
+    height: 140px;
 }
 .content b{
     position: absolute;
@@ -306,21 +307,23 @@ li.active .pic{
 li.active .pic img{
     width: 100px;
     height: 100px;
-    border: 8px solid #F26328;
+    border: 8px solid #F79077;
 }
 li.active .pic p{
-    color: #F26328;
+    color: #fff;
 
 }
 li.active .content{
-    border-left: 5px solid #F26328;
+    border-left: 8px solid #F79077;
+    z-index: 999;
 }
 li.active .content .main_content{
     display: block;
 }
 li.active .content b{
     background: url(../image/sprite.png) 0 -43px;
-    left: -20px;
+    left: -21px;
+
 }
 li.active content{
     left: 234px;
@@ -334,9 +337,9 @@ li.active .check .spite{
 }
 li.active .check .line{
     position: absolute;
-    width: 38px;
+    width: 40px;
     height: 1px;
-    background: #F26328;
+    background: #f67c5f;
     left: 180px;
     top: 50px;
     font-size: 1px;
@@ -347,7 +350,7 @@ li.active .check s{
     width: 20px;
     height: 20px;
     border: 5px solid #fff;
-    background: #F26328 url(../image/sprite.png) 2px -200px;
+    background: #f67c5f url(../image/sprite.png) 2px -200px;
     cursor: pointer;
 }
 li.active .content h3{
